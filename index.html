@@ -8,6 +8,39 @@
 </head>
 <body>
     <h1>Bienvenido al Sistema de Gestión</h1>
+    
+    <form id="task-form">
+        <label for="task-name">Nombre de la tarea:</label>
+        <input type="text" id="task-name" name="task-name" required>
+        
+        <label for="task-desc">Descripción:</label>
+        <textarea id="task-desc" name="task-desc" required></textarea>
+        
+        <label for="task-date">Fecha de vencimiento:</label>
+        <input type="date" id="task-date" name="task-date" required>
+        
+        <label for="task-priority">Prioridad:</label>
+        <select id="task-priority" name="task-priority" required>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+        </select>
+        
+        <label for="task-status">Estado:</label>
+        <select id="task-status" name="task-status" required>
+            <option value="pendiente">Pendiente</option>
+            <option value="en-progreso">En progreso</option>
+            <option value="completada">Completada</option>
+        </select>
+        
+        <button type="submit">Agregar tarea</button>
+    </form>
+    
+    <section id="task-list">
+        <h2>Lista de tareas</h2>
+        <ul id="tasks"></ul>
+    </section>
+    
     <script src="script.js"></script>
 </body>
 </html>
